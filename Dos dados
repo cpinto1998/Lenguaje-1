@@ -1,0 +1,35 @@
+
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+
+   
+using namespace std;
+
+   int main()
+
+
+   {                  
+    srand( time( 0 ) ); 
+    
+
+   
+    int lanzamiento;
+    int Frecuencia[13] = {0};                         
+    
+
+    for ( int i = 1; i <= 3600; i++ )
+      {                                                 
+       lanzamiento = ( 1 + rand() % 6 ) + (1 + rand() % 6 );  
+       // lanzamiento de dados
+       Frecuencia[lanzamiento]++;  
+       
+
+      }                  
+    for ( int n = 2; 12 >= n; n++ ) 
+    // 
+    cout <<"\n El resultado de " << n << " es: " << Frecuencia[n];
+    cout << endl;
+    return 0;
+
+   }  
