@@ -1,0 +1,17 @@
+#include <iostream> 
+#include <math.h> 
+  
+using namespace std; 
+  
+int main() { 
+  float numero,raiz; 
+  
+  cout << "Ingrese un numero: "; 
+  cin >> numero; 
+  
+  raiz = sqrt(numero); 
+  
+  cout << "La raiz cuadrada de " << numero << " es " << raiz << endl; 
+  
+  return 0; 
+}   
