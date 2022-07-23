@@ -1,29 +1,14 @@
-
 #include<iostream>
 #include<windows.h>
 #include<conio.h>
 #include<stdlib.h>
 #include<time.h>
-
 using namespace std;
 
 #define ARRIBA 72
 #define IZQUIERDA 75
 #define ABAJO 80
 #define DERECHA 77
-#define ESC 27
-
-int Puntos;
-int cuerpo[200][2];
-int n=1;
-int tam = 3;
-int x=10, y=12;
-int dir=3;
-int xc=30, yc=20;
-int xxc= 40, yyc=18;
-int d;
-int dif;
-double tiempo;
 
 void inicializarArreglo() {
 	for(int i = 0; i < 200; i++) {
@@ -172,30 +157,4 @@ void proceso(char &tecla, int &puntos){
 	if (dir==3){x++;}
 	if (dir==4){x--;}
 	Sleep(dif);
-}
-
-
-int main(){
-	char tecla;
-	int puntos=0;
-	int xPos=30, yPos=20;
-	
-	inicializarArreglo();
-	dificultad();	
-	gotoxy(50,2);
-	cout << puntos;
-	pintar();
-	gotoxy(xPos, yPos);cout<<(char)4;	
-	
-	while(tecla != ESC && gameover() ){
-	    proceso(tecla, puntos);
-	}
-	
-	if ( !gameover()){
-		MessageBox(NULL,"Has perdido","Perdedor", MB_OK);
-		system("cls");
-	}
-	
-	system("pause>NULL");
-	return 0;
 }
