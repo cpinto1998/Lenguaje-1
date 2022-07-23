@@ -10,6 +10,18 @@ using namespace std;
 #define ABAJO 80
 #define DERECHA 77
 
+int Puntos;
+int cuerpo[200][2];
+int n=1;
+int tam = 3;
+int x=10, y=12;
+int dir=3;
+int xc=30, yc=20;
+int xxc= 40, yyc=18;
+int d;
+int dif;
+double tiempo;
+
 void inicializarArreglo() {
 	for(int i = 0; i < 200; i++) {
 		// inicializa los valores de cuerpo
